@@ -1,11 +1,22 @@
+# Deployed contract on Rinkeby
+
+1) ERC-721 Token Name: `Star notary 54231`
+2) ERC-721 Token Symbol: `STN54231`
+3) Version of the Truffle and OpenZeppelin used
+```
+Truffle v5.5.15 (core: 5.5.15)
+Ganache v^7.1.0
+Solidity - 0.5.16 (solc-js)
+Node v16.10.0
+Web3.js v1.5.3
+```
+4) Your Token Address on the Rinkeby Network: [0x40F42d129574fbdcff2Be6e1cfc2A6cE7fe73C4F](https://rinkeby.etherscan.io/address/0x40F42d129574fbdcff2Be6e1cfc2A6cE7fe73C4F)
+
 # ND1309 C2 Ethereum Smart Contracts, Tokens and Dapps - Project Starter 
 **PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.
 
 ### ToDo
 This Starter Code has already implemented the functionalities you implemented in the StarNotary (Version 2) exercise, and have comments in all the files you need to implement your tasks.
-
-
-
 ### Dependencies
 For this project, you will need to have:
 1. **Node and NPM** installed - NPM is distributed with [Node.js](https://www.npmjs.com/get-npm)

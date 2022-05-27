@@ -41,9 +41,26 @@ const App = {
 
   // Implement Task 4 Modify the front end of the DAPP
   lookUp: async function (){
-    
+    const { lookUpTokenIdToStarInfo } = this.meta.methods;
+    const id = document.getElementById("lookid").value;
+    try {
+        const name = await lookUpTokenIdToStarInfo(id).call({from: this.account});
+        App.setStatus("Star ID " + id + " name: " + name);
+    } catch (error) {
+        const errorString = String(error);
+        const status = !errorString.includes("Token does not exist")
+            ? errorString
+            : "Star ID " + id + " does not exist!"
+        App.setStatus(status);
+    }
+  },
+  contractDetails: async function (){
+    const { name, symbol } = this.meta.methods;
+    const { address } = this.meta.options;
+    const contractName = await name().call({from: this.account});
+    const contractSymbol = await symbol().call({from: this.account});
+    App.setStatus(`Contract: address = '${address}', name = '${contractName}', symbol = '${contractSymbol}'`)
   }
-
 };
 
 window.App = App;
